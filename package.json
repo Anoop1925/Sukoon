@@ -1,0 +1,64 @@
+{
+  "name": "sukoon-nextjs",
+  "version": "1.0.0",
+  "description": "Sukoon stress-relief website - Next.js migration",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "type-check": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:coverage:summary": "jest --coverage --coverageReporters=text-summary",
+    "test:pbt": "jest --testMatch='**/*.pbt.test.ts'"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "critters": "^0.0.23",
+    "framer-motion": "^11.15.0",
+    "next": "^16.0.7",
+    "next-pwa": "^5.6.0",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "react-hook-form": "^7.54.2",
+    "react-icons": "^5.4.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@next/eslint-plugin-next": "^16.0.7",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.6",
+    "@types/react-dom": "^19.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.19.1",
+    "@typescript-eslint/parser": "^8.19.1",
+    "autoprefixer": "^10.4.20",
+    "cross-env": "^10.1.0",
+    "eslint": "^9.17.0",
+    "fast-check": "^3.22.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "postcss": "^8.4.49",
+    "prettier": "^3.4.2",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "comments": {
+    "security": {
+      "nextjs": "Version 16.0.7+ required to address CVE-2025-55182 and CVE-2025-66478 - critical vulnerabilities in React Server Components that could allow unauthenticated remote code execution",
+      "react": "Version 19.2.1+ required as part of the security patch for Next.js vulnerabilities",
+      "react-dom": "Version 19.2.1+ required to match React version and ensure compatibility with security patches"
+    }
+  }
+}

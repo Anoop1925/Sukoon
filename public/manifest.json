@@ -1,0 +1,52 @@
+{
+  "name": "Sukoon - Stress Relief & Mental Wellness",
+  "short_name": "Sukoon",
+  "description": "Your companion for stress relief and mental wellness. Access therapy services including audio, reading, yoga, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "lifestyle", "wellness"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Audio Therapy",
+      "short_name": "Audio",
+      "description": "Access audio therapy resources",
+      "url": "/therapies/audio",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Yoga Therapy",
+      "short_name": "Yoga",
+      "description": "Access yoga therapy resources",
+      "url": "/therapies/yoga",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
