@@ -86,13 +86,13 @@ export function BookCard({
 }: BookCardProps): React.ReactElement {
   return (
     <div className={`card-premium flex flex-col h-full group ${className}`}>
-      {/* Book Cover */}
-      <div className="relative w-full aspect-[2/3] mb-4 rounded-lg overflow-hidden bg-surface-elevated">
+      {/* Book Cover - Square with minimal border */}
+      <div className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden bg-surface-elevated border border-border/30">
         <Image
           src={coverImage}
           alt={`${title} by ${author}`}
           fill
-          className="object-contain p-2 group-hover:scale-105 transition-transform duration-300"
+          className="object-contain p-3 group-hover:scale-105 transition-transform duration-300"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
         />
       </div>

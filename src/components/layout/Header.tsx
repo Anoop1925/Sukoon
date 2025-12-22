@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Navigation } from './Navigation';
 
@@ -47,16 +48,20 @@ export function Header({ transparent = false, onMenuClick }: HeaderProps) {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="group flex items-center gap-2">
+          <Link href="/" className="group flex items-center">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative"
+              className="relative h-10 w-auto"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-xl blur-md opacity-40 group-hover:opacity-60 transition-opacity" />
-              <div className="relative px-5 py-2.5 bg-gradient-to-r from-primary to-secondary rounded-xl shadow-md">
-                <span className="text-lg md:text-xl font-bold text-white tracking-tight">Sukoon</span>
-              </div>
+              <Image 
+                src="/images/Sukoon_logo.png" 
+                alt="Sukoon Logo" 
+                width={120}
+                height={40}
+                className="h-10 w-auto object-contain"
+                priority
+              />
             </motion.div>
           </Link>
 

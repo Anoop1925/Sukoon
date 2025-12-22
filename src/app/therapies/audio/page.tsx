@@ -19,15 +19,15 @@ const BookCard = dynamic(() => import('@/components/therapy/BookCard').then(mod 
  */
 export default function AudioTherapyPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-16 md:pt-20">
       {/* Hero Section */}
-      <section className="relative h-[50vh] flex items-center justify-center bg-gradient-to-br from-primary/90 to-secondary/90">
+      <section className="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-br from-primary/90 to-secondary/90 py-16 md:py-20">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/20"></div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white animate-fade-in">
-            Welcome to Our <span className="text-accent">Audio Therapy</span>
+            Welcome to Our <span className="text-white drop-shadow-lg">Audio Therapy</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/95 max-w-2xl mx-auto drop-shadow-md">
             Listen to Music, Motivational Podcasts and Audiobooks to gain happiness, knowledge and lighten your stress.
           </p>
         </div>

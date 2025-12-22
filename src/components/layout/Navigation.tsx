@@ -92,13 +92,13 @@ export function Navigation({
     const active = isActive(item);
     const baseLink =
       variant === 'desktop'
-        ? 'text-sm font-medium transition-colors duration-300 hover:text-primary'
+        ? 'text-sm font-medium transition-colors duration-300 hover:text-primary relative pb-1'
         : 'text-lg font-medium transition-colors duration-300 hover:text-primary';
 
     return `${baseLink} ${
       active
-        ? 'text-primary border-b-2 border-primary'
-        : 'text-gray-700'
+        ? 'text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary'
+        : 'text-foreground hover:text-primary'
     }`;
   };
 
