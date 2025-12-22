@@ -32,7 +32,7 @@ export function About({
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src={teamImage}
                 alt="Sukoon Team"
@@ -40,7 +40,6 @@ export function About({
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
             
             {/* Decorative Elements */}

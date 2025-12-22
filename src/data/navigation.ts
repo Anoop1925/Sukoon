@@ -23,9 +23,15 @@ export const navigationItems: NavItem[] = [
     external: false,
   },
   {
+    id: 'nav-faq',
+    label: 'FAQs',
+    href: '#faq',
+    external: false,
+  },
+  {
     id: 'nav-contact',
     label: 'CONTACT US',
-    href: '/contact',
+    href: '#contact',
     external: false,
   },
 ];

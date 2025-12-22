@@ -1,6 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { NavItem } from '@/types';
 import { navigationItems } from '@/data';
@@ -24,30 +25,7 @@ export interface NavigationProps {
 }
 
 /**
- * Navigation Component
- * 
- * Responsive navigation with desktop and mobile variants, active link highlighting.
- * 
- * @component
- * @example
- * // Desktop navigation
- * <Navigation variant="desktop" />
- * 
- * @example
- * // Mobile navigation with click handler
- * <Navigation 
- *   variant="mobile" 
- *   onItemClick={() => closeMobileMenu()} 
- * />
- * 
- * Features:
- * - Uses Next.js Link for client-side navigation
- * - Active link highlighting based on current pathname
- * - Support for both desktop and mobile layouts
- * - Handles both internal and external links
- * 
- * @param props - NavigationProps
- * @returns Navigation component
+ * Navigation Component with scroll-based active states
  */
 export function Navigation({
   variant = 'desktop',
@@ -55,29 +33,66 @@ export function Navigation({
   onItemClick,
 }: NavigationProps) {
   const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState<string>('');
+
+  useEffect(() => {
+    // Only run on home page
+    if (pathname !== '/') {
+      setActiveSection('');
+      return;
+    }
+
+    const handleScroll = () => {
+      const sections = ['about', 'services', 'faq', 'contact'];
+      const scrollPosition = window.scrollY + 100; // Offset for header
+
+      // Check if we're at the top (hero section)
+      if (window.scrollY < 200) {
+        setActiveSection('');
+        return;
+      }
+
+      // Find which section is currently in view
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(sectionId);
+            return;
+          }
+        }
+      }
+    };
+
+    handleScroll(); // Initial check
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [pathname]);
 
   /**
    * Check if a navigation item is currently active
    */
   const isActive = (item: NavItem): boolean => {
-    // Handle null pathname (e.g., in test environments)
+    // Handle null pathname
     if (!pathname) {
       return false;
     }
     
-    // For home page
-    if (item.href === '/' && pathname === '/') {
-      return true;
+    // For home page link
+    if (item.href === '/') {
+      return pathname === '/' && !activeSection;
     }
     
-    // For hash links (anchor links on same page)
-    if (item.href.startsWith('#')) {
-      return pathname === '/';
+    // For hash links on home page
+    if (item.href.startsWith('#') && pathname === '/') {
+      const sectionId = item.href.substring(1);
+      return activeSection === sectionId;
     }
     
     // For other pages
-    if (item.href !== '/' && pathname.startsWith(item.href)) {
-      return true;
+    if (!item.href.startsWith('#') && item.href !== '/') {
+      return pathname.startsWith(item.href);
     }
     
     return false;
@@ -102,9 +117,25 @@ export function Navigation({
     }`;
   };
 
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (onItemClick) {
       onItemClick();
+    }
+
+    // Handle smooth scrolling for hash links
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const element = document.getElementById(href.substring(1));
+      if (element) {
+        const offset = 80; // Header height
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
     }
   };
 
@@ -120,7 +151,7 @@ export function Navigation({
               className={linkStyles(item)}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={handleClick}
+              onClick={() => onItemClick?.()}
             >
               {item.label}
             </a>
@@ -134,7 +165,7 @@ export function Navigation({
               key={item.id}
               href={item.href}
               className={linkStyles(item)}
-              onClick={handleClick}
+              onClick={(e) => handleClick(e, item.href)}
             >
               {item.label}
             </a>
@@ -147,7 +178,7 @@ export function Navigation({
             key={item.id}
             href={item.href}
             className={linkStyles(item)}
-            onClick={handleClick}
+            onClick={(e) => handleClick(e, item.href)}
           >
             {item.label}
           </Link>

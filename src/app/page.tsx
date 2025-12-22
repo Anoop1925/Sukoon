@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { Hero } from '@/components/sections';
-import { therapies, testimonials, teamMembers, faqItems } from '@/data';
+import { therapies, faqItems } from '@/data';
 
 // Lazy load heavy components with dynamic imports
 const About = dynamic(() => import('@/components/sections/About').then(mod => ({ default: mod.About })), {
@@ -14,15 +14,11 @@ const Services = dynamic(() => import('@/components/sections/Services').then(mod
   loading: () => <div className="py-16 text-center">Loading...</div>
 });
 
-const TeamMembers = dynamic(() => import('@/components/sections/TeamMembers').then(mod => ({ default: mod.TeamMembers })), {
-  loading: () => <div className="py-16 text-center">Loading...</div>
-});
-
-const Testimonials = dynamic(() => import('@/components/sections/Testimonials').then(mod => ({ default: mod.Testimonials })), {
-  loading: () => <div className="py-16 text-center">Loading...</div>
-});
-
 const FAQ = dynamic(() => import('@/components/sections/FAQ').then(mod => ({ default: mod.FAQ })), {
+  loading: () => <div className="py-16 text-center">Loading...</div>
+});
+
+const Contact = dynamic(() => import('@/components/sections/Contact').then(mod => ({ default: mod.Contact })), {
   loading: () => <div className="py-16 text-center">Loading...</div>
 });
 
@@ -33,9 +29,8 @@ const FAQ = dynamic(() => import('@/components/sections/FAQ').then(mod => ({ def
  * - Hero section with animated title and CTA
  * - About section with team photo
  * - Services section with therapy cards
- * - Team members section
- * - Testimonials carousel
  * - FAQ accordion
+ * - Contact form
  * 
  * Uses Framer Motion for scroll animations
  */
@@ -78,26 +73,6 @@ export default function Home() {
         <Services services={therapies} />
       </motion.div>
 
-      {/* Team Members Section */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: '-100px' }}
-        variants={fadeInUp}
-      >
-        <TeamMembers members={teamMembers} />
-      </motion.div>
-
-      {/* Testimonials Section */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: '-100px' }}
-        variants={fadeInUp}
-      >
-        <Testimonials testimonials={testimonials} />
-      </motion.div>
-
       {/* FAQ Section */}
       <motion.div
         initial="hidden"
@@ -106,6 +81,16 @@ export default function Home() {
         variants={fadeInUp}
       >
         <FAQ items={faqItems} />
+      </motion.div>
+
+      {/* Contact Section */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-100px' }}
+        variants={fadeInUp}
+      >
+        <Contact />
       </motion.div>
     </>
   );
