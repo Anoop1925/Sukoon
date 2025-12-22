@@ -191,14 +191,14 @@ export const therapies: TherapyService[] = [
   {
     id: 'special',
     title: 'Special Therapy',
-    description: 'If you need special attention and help from us.',
+    description: 'If you need special attention and help from us. Liberate yourself from all negative things.',
     icon: 'FaHeart',
     image: '/images/specialtherapy.jpg',
     slug: 'special',
     content: {
       hero: {
         title: 'Special Therapy',
-        subtitle: 'Personalized care for your unique needs',
+        subtitle: 'Personalized care for your unique needs.',
         backgroundImage: '/images/specialtherapy.jpg',
       },
       sections: [
