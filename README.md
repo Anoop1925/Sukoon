@@ -2,8 +2,6 @@
 
 <img src="./public/images/Sukoon_logo.png" alt="Sukoon Logo" width="200"/>
 
-# Sukoon
-
 ### Mental Wellness Platform
 
 *Find your peace, one therapy at a time*
