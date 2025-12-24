@@ -56,8 +56,27 @@ export default function ChildTherapyPage() {
           </div>
           <div>
             <div className="space-y-4 text-lg text-gray-700">
-              <p className="font-semibold">A baby's smile is so powerful that it can make you forget all the troubles in the world.</p>
-              <p>Their smiles are one of the cutest things in the world, and they can melt your heart in a second.</p>
+              <p className="font-semibold text-xl text-gray-900">A baby's smile is so powerful that it can make you forget all the troubles in the world.</p>
+              
+              <div className="mt-6 space-y-3">
+                <h3 className="font-semibold text-xl text-gray-900 mb-3">Why Child Therapy Works:</h3>
+                <div className="flex items-start gap-3">
+                  <span className="text-pink-500 text-2xl">•</span>
+                  <p><strong>Instant Joy:</strong> Children's laughter and playfulness trigger the release of endorphins, our body's natural mood elevators.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-pink-500 text-2xl">•</span>
+                  <p><strong>Stress Relief:</strong> Watching children play helps reduce cortisol levels and promotes relaxation.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-pink-500 text-2xl">•</span>
+                  <p><strong>Perspective Shift:</strong> Their innocent joy reminds us of life's simple pleasures and helps us reconnect with our inner child.</p>
+                </div>
+              </div>
+              
+              <p className="mt-6 italic text-gray-600">
+                "Children are natural healers. Their genuine smiles, uninhibited laughter, and boundless curiosity remind us of the beauty in everyday moments."
+              </p>
             </div>
           </div>
         </div>
