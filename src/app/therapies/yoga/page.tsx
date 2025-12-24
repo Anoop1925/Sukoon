@@ -50,13 +50,17 @@ export default function YogaTherapyPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center bg-gradient-to-br from-green-600 to-teal-600 text-white">
-        <div className="absolute inset-0 bg-black opacity-30"></div>
+      <section 
+        className="relative h-[60vh] flex items-center justify-center text-white"
+        style={{ 
+          background: 'linear-gradient(135deg, #77d7ed 0%, #6bb6dd 100%)'
+        }}
+      >
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
             Yoga Enhances Your Life
           </h1>
-          <p className="text-xl md:text-2xl font-light">
+          <p className="text-xl md:text-2xl font-light drop-shadow-md">
             A mind and body practice combining various styles of physical postures, 
             breathing techniques, and meditation or relaxation: Yoga is an ancient 
             practice that may have originated in India.
@@ -68,13 +72,13 @@ export default function YogaTherapyPage() {
       <section id="benefits" className="py-16 px-4 max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Benefits of Yoga</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="relative h-[450px] md:h-[600px]">
+          <div className="relative h-[400px] md:h-[500px] w-full md:w-4/5 mx-auto rounded-3xl overflow-hidden p-4 shadow-lg border-2 border-gray-200" style={{ backgroundColor: '#fdfcf8' }}>
             <Image
               src="/images/Yoga_Benefits.png"
               alt="Yoga Benefits"
               fill
-              className="object-contain"
-              sizes="(max-width: 768px) 80vw, 50vw"
+              className="object-contain p-4"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
           <div>
