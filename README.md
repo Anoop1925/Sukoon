@@ -1,6 +1,8 @@
 <div align="center">
 
-# 🌸 Sukoon
+<img src="./public/images/Sukoon_logo.png" alt="Sukoon Logo" width="200"/>
+
+# Sukoon
 
 ### Mental Wellness Platform
 
@@ -349,6 +351,6 @@ Always consult with qualified healthcare professionals for medical advice and tr
 
 Made with ❤️ by the Sukoon Team
 
-[Website](#) • [Twitter](#) • [LinkedIn](#)
+[Website](#)
 
 </div>
