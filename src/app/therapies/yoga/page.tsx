@@ -68,13 +68,13 @@ export default function YogaTherapyPage() {
       <section id="benefits" className="py-16 px-4 max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Benefits of Yoga</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="relative h-96 md:h-[500px]">
+          <div className="relative h-[450px] md:h-[600px]">
             <Image
-              src="https://preview.colorlib.com/theme/yogabest/images/xabout.png.pagespeed.ic.H7uxRdWOgu.webp"
+              src="/images/Yoga_Benefits.png"
               alt="Yoga Benefits"
               fill
               className="object-contain"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 80vw, 50vw"
             />
           </div>
           <div>

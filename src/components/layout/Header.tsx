@@ -52,14 +52,14 @@ export function Header({ transparent = false, onMenuClick }: HeaderProps) {
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative h-10 w-auto"
+              className="relative h-11 w-auto"
             >
               <Image 
                 src="/images/Sukoon_logo.png" 
                 alt="Sukoon Logo" 
-                width={120}
-                height={40}
-                className="h-10 w-auto object-contain"
+                width={145}
+                height={44}
+                className="h-11 w-auto object-contain"
                 priority
               />
             </motion.div>

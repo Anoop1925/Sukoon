@@ -233,51 +233,54 @@ export function Contact({
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-6"
           >
-            {/* Contact Cards - 2x2 Grid */}
+            {/* Contact Cards - 2x2 Grid with Enhanced Design */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="glass rounded-xl p-6 shadow-lg">
-                <div className="flex flex-col items-center text-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="relative glass rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden border border-border/30">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
+                <div className="relative flex flex-col items-center text-center gap-3">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1 text-sm">Email</h3>
-                    <a href="mailto:contact@sukoon.com" className="text-primary hover:underline text-sm">
+                    <h3 className="font-bold text-foreground mb-1.5 text-sm">Email</h3>
+                    <a href="mailto:contact@sukoon.com" className="text-primary hover:underline text-sm font-medium">
                       contact@sukoon.com
                     </a>
                   </div>
                 </div>
               </div>
 
-              <div className="glass rounded-xl p-6 shadow-lg">
-                <div className="flex flex-col items-center text-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="relative glass rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden border border-border/30">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-secondary/5 rounded-full blur-2xl group-hover:bg-secondary/10 transition-colors" />
+                <div className="relative flex flex-col items-center text-center gap-3">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-secondary/80 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1 text-sm">Phone</h3>
-                    <a href="tel:+1234567890" className="text-secondary hover:underline text-sm">
+                    <h3 className="font-bold text-foreground mb-1.5 text-sm">Phone</h3>
+                    <a href="tel:+1234567890" className="text-secondary hover:underline text-sm font-medium">
                       +1 (234) 567-890
                     </a>
                   </div>
                 </div>
               </div>
 
-              <div className="glass rounded-xl p-6 shadow-lg">
-                <div className="flex flex-col items-center text-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="relative glass rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden border border-border/30">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-accent/5 rounded-full blur-2xl group-hover:bg-accent/10 transition-colors" />
+                <div className="relative flex flex-col items-center text-center gap-3">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-accent/80 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1 text-sm">Location</h3>
-                    <p className="text-muted text-sm">
+                    <h3 className="font-bold text-foreground mb-1.5 text-sm">Location</h3>
+                    <p className="text-muted text-xs leading-relaxed">
                       123 Wellness Street<br />
                       Peace City, PC 12345
                     </p>
@@ -285,15 +288,16 @@ export function Contact({
                 </div>
               </div>
 
-              <div className="glass rounded-xl p-6 shadow-lg">
-                <div className="flex flex-col items-center text-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="relative glass rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden border border-border/30">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
+                <div className="relative flex flex-col items-center text-center gap-3">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1 text-sm">Quick Response</h3>
+                    <h3 className="font-bold text-foreground mb-1.5 text-sm">Quick Response</h3>
                     <p className="text-muted text-xs">
                       24-48 hours response time
                     </p>
@@ -301,6 +305,44 @@ export function Contact({
                 </div>
               </div>
             </div>
+
+            {/* Additional Info Section */}
+            <div className="glass rounded-2xl p-6 shadow-xl border border-border/30">
+              <h3 className="font-bold text-foreground mb-4 flex items-center gap-2">
+                <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Why Reach Out?
+              </h3>
+              <ul className="space-y-3 text-sm text-muted">
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Get personalized therapy recommendations</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Report technical issues or bugs</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Share feedback and suggestions</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Explore partnership opportunities</span>
+                </li>
+              </ul>
+            </div>
+
+            
           </motion.div>
         </div>
       </div>

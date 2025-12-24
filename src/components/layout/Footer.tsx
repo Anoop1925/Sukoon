@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   FaFacebookF,
   FaTwitter,
@@ -30,10 +31,14 @@ export function Footer({ className = '' }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="px-3 py-1.5 bg-gradient-to-r from-primary to-secondary rounded-lg">
-                <span className="text-lg font-bold text-white">Sukoon</span>
-              </div>
+            <div className="mb-4">
+              <Image 
+                src="/images/Sukoon_logo.png" 
+                alt="Sukoon Logo" 
+                width={100}
+                height={35}
+                className="h-8 w-auto object-contain"
+              />
             </div>
             <p className="text-sm text-muted leading-relaxed mb-4">
               Your trusted companion for mental wellness and stress relief.
